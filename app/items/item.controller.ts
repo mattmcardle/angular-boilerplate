@@ -1,4 +1,4 @@
-module app {
+module app.item {
 	'use strict';
 
 	export class ItemCtrl {
@@ -14,7 +14,10 @@ module app {
 		
 		setTitle() {
 			// set view specific page title here
-			this.$rootScope.$title = "Items";
+			this.$rootScope.title = "Items";
 		}
 	}
+	angular
+		.module('app.item')
+		.controller('ItemCtrl', ItemCtrl);
 }
